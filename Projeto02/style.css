@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+}
+body{
+    background: yellow;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    background: orange;
+    width: 100vw;
+    height: 40vh;
+}
+section {
+    background: red;
+    width: 100vw;
+    height: 40vh;
+}
+footer {
+    background: purple;
+    width: 100vw;
+    height: 20vh;
+}
+p{
+    text-align: center;
+}

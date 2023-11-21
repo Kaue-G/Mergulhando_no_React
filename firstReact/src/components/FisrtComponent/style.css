@@ -1,0 +1,25 @@
+.first-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    justify-content: center;
+}
+
+
+.first-section section{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first-section section:first-child{
+    background-color: blue;
+}
+
+.first-section section:last-child{
+    background-color: tomato;
+}
