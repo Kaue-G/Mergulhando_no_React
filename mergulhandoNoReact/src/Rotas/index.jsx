@@ -1,28 +1,15 @@
 import React from "react";
-import styled from "styled-components";
-import photoTeste from "./../assets/fotoExemplo.jpg";
-import Titulo from "../components/Titulo";
-import Campo from "../components/Campo";
-import Conteudo from "../components/Conteudo";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "../pages";
+import Postagem from "../pages/postagem";
 
 export default function Rotas() {
 
-    return <> 
-        <Titulo nome="Mergulhando em React"/>
-        <Campo>
-            <Conteudo 
-                phodo={photoTeste}
-                nome="@pessoa1"  
-                descricao="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis fugiat praesentium explicabo quae, provident perspiciatis a inventore quo. Totam tempore ullam voluptates assumenda ratione quod veniam quibusdam, consequuntur non nemo."
-            />
-        </Campo>
-        <Campo>
-            <Conteudo 
-                phodo={photoTeste}
-                nome="@pessoa2"  
-                descricao="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis fugiat praesentium explicabo quae, provident perspiciatis a inventore quo. Totam tempore ullam voluptates assumenda ratione quod veniam quibusdam, consequuntur non nemo."
-            />
-        </Campo>
-    </>
+    return <BrowserRouter>
+        <Routes>
+            <Route index path="/" element={ <Home/> } />
+            <Route path="/postagem/:nome/:descricao" element={ <Postagem /> } />
+        </Routes>
+    </BrowserRouter>
 }
 
